@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Comparison PK</title>
+    <!-- Liên kết file CSS trong thư mục css/ -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<main class="container">
+    <section id="game" class="game">
+        <h1 class="game__title">Number Comparison PK</h1>
+        <div id="join" class="game__join">
+            <input
+                    id="playerName"
+                    type="text"
+                    class="game__input"
+                    placeholder="Enter your name"
+                    aria-label="Player name"
+                    required
+            >
+            <button id="joinGame" class="game__button game__button--join">
+                Join Game
+            </button>
+        </div>
+        <div id="waiting" class="game__waiting hidden">
+            <p class="game__status">Waiting for another player...</p>
+        </div>
+        <div id="gameplay" class="game__gameplay hidden">
+            <p id="comparison" class="game__comparison"></p>
+            <p id="correctCount" class="game__count"></p>
+            <p id="timer" class="game__timer"></p>
+            <p class="game__hint">
+                Draw: <, >, or = (two lines for < or >, two horizontal lines for =)
+            </p>
+            <canvas
+                    id="canvas"
+                    width="280"
+                    height="280"
+                    class="game__canvas"
+                    aria-label="Drawing canvas for comparison symbols"
+            ></canvas>
+            <div class="game__controls">
+                <button id="clearCanvas" class="game__button game__button--clear">
+                    Clear
+                </button>
+                <button id="submitAnswer" class="game__button game__button--submit">
+                    Submit
+                </button>
+            </div>
+            <p id="recognized" class="game__re  cognized"></p>
+        </div>
+        <div id="result" class="game__result hidden">
+            <p id="resultMessage" class="game__message"></p>
+            <button id="playAgain" class="game__button game__button--play-again">
+                Play Again
+            </button>
+            <button id="retryConnect" class="game__button game__button--retry hidden">
+                Retry Connection
+            </button>
+        </div>
+    </section>
+</main>
+<!-- Liên kết file JavaScript trong thư mục js/ -->
+<script src="/js/script.js"></script>
+</body>
+</html>
